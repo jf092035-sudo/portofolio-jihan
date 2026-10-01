@@ -1,0 +1,976 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fffafb;
+    color: #3c3036;
+    line-height: 1.7;
+}
+
+:root {
+    --pink: #e878a5;
+    --pink-dark: #d85d91;
+    --pink-soft: #fff0f6;
+    --pink-bg: #fff5f8;
+    --text: #3c3036;
+    --gray: #85777e;
+    --border: #f1dfe7;
+}
+
+
+/* ================= GENERAL ================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 250, 251, 0.93);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid #f3e5ea;
+
+    z-index: 999;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: #796d73;
+    font-size: 12px;
+    transition: 0.25s;
+}
+
+.navbar nav a:hover {
+    color: var(--pink);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1150px;
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 140px 6% 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.hello {
+    color: var(--pink-dark);
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 85px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    font-weight: 600;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--pink);
+}
+
+.intro {
+    max-width: 490px;
+
+    margin-top: 25px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+/* ================= HERO BUTTON ================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 11px 21px;
+
+    background: var(--pink);
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    transition: 0.25s;
+}
+
+.button:hover {
+    background: var(--pink-dark);
+
+    transform: translateY(-3px);
+}
+
+.button span {
+    margin-left: 5px;
+}
+
+.button-cv {
+    background: white;
+
+    color: var(--pink-dark);
+
+    border: 1px solid #edbfd0;
+}
+
+.button-cv:hover {
+    background: var(--pink-soft);
+
+    color: var(--pink-dark);
+}
+
+.button-download {
+    background: #3c3036;
+
+    color: white;
+}
+
+.button-download:hover {
+    background: #241d21;
+
+    color: white;
+}
+
+
+/* ================= HERO PHOTO ================= */
+
+.hero-card {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.pink-circle {
+    position: absolute;
+
+    width: 290px;
+    height: 290px;
+
+    border-radius: 50%;
+
+    background: #ffe0eb;
+
+    right: 60px;
+
+    z-index: -1;
+}
+
+.profile-card {
+    width: 320px;
+
+    padding: 10px 10px 40px;
+
+    background: white;
+
+    box-shadow:
+        0 20px 50px rgba(75, 30, 50, 0.12);
+
+    transform: rotate(3deg);
+
+    transition: 0.4s;
+}
+
+.profile-card:hover {
+    transform:
+        rotate(0deg)
+        translateY(-5px);
+}
+
+.profile-card img {
+    width: 100%;
+
+    height: 400px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.photo-name {
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: var(--pink-dark);
+}
+
+.photo-name span {
+    margin-right: 5px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 105px 6%;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title small {
+    color: var(--pink-dark);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.section-title h2 {
+    margin-top: 5px;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+}
+
+.section-title p {
+    margin-top: 8px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr;
+
+    gap: 70px;
+}
+
+.about-text h3 {
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.about-text b {
+    color: var(--pink-dark);
+}
+
+
+/* ================= MINI INFO ================= */
+
+.mini-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.mini-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    transition: 0.25s;
+}
+
+.mini-box:hover {
+    transform: translateY(-4px);
+}
+
+.mini-box > span {
+    font-size: 23px;
+}
+
+.mini-box small {
+    display: block;
+
+    color: #a19399;
+
+    font-size: 9px;
+}
+
+.mini-box strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+
+/* ================= DATA DIRI ================= */
+
+.data-section {
+    padding: 105px 6%;
+
+    background: var(--pink-bg);
+}
+
+.data-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.data-card {
+    padding: 25px 20px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(100, 40, 65, 0.08);
+}
+
+.data-card span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #9b8d94;
+
+    font-size: 9px;
+}
+
+.data-card h3 {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* ================= HOBI ================= */
+
+.hobby-card {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 35px rgba(80, 30, 50, 0.05);
+
+    transition: 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+}
+
+.hobby-icon {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--pink-soft);
+
+    border-radius: 14px;
+
+    font-size: 30px;
+}
+
+.hobby-card h3 {
+    margin-bottom: 7px;
+
+    font-size: 19px;
+}
+
+.hobby-card p {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+
+/* ================= FAVORIT ================= */
+
+.favorite-section {
+    padding: 105px 6%;
+
+    background: #fff;
+}
+
+.favorite-grid {
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.favorite {
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #fffafb;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.favorite:hover {
+    transform: translateY(-5px);
+
+    background: var(--pink-soft);
+}
+
+.favorite-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.favorite small {
+    color: #9a8d93;
+
+    font-size: 9px;
+}
+
+.favorite h3 {
+    margin-top: 2px;
+
+    font-size: 15px;
+}
+
+
+/* ================= CV ================= */
+
+.cv-section {
+    padding: 110px 6%;
+
+    background: var(--pink-bg);
+}
+
+.cv-card {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px rgba(80, 30, 50, 0.07);
+
+    transition: 0.3s;
+}
+
+.cv-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 50px rgba(80, 30, 50, 0.1);
+}
+
+.cv-icon {
+    width: 80px;
+    height: 80px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--pink-soft);
+
+    border-radius: 18px;
+
+    font-size: 36px;
+}
+
+.cv-content small {
+    color: var(--pink-dark);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.cv-content h2 {
+    margin-top: 5px;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+.cv-content p {
+    max-width: 600px;
+
+    margin-top: 10px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.cv-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.cv-button {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    transition: 0.25s;
+}
+
+.cv-button.primary {
+    background: var(--pink);
+
+    color: white;
+}
+
+.cv-button.primary:hover {
+    background: var(--pink-dark);
+
+    transform: translateY(-3px);
+}
+
+.cv-button.secondary {
+    background: #3c3036;
+
+    color: white;
+}
+
+.cv-button.secondary:hover {
+    background: #241d21;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= ENDING ================= */
+
+.ending {
+    padding: 120px 6%;
+
+    text-align: center;
+
+    background: #3c3036;
+
+    color: white;
+}
+
+.big-heart {
+    color: #f08db4;
+
+    font-size: 34px;
+}
+
+.ending h2 {
+    margin-top: 8px;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.ending p {
+    margin-top: 20px;
+
+    color: #cdbfc5;
+
+    font-size: 12px;
+}
+
+.ending a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #f08db4;
+
+    font-size: 11px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid var(--border);
+
+    color: #968990;
+
+    font-size: 9px;
+}
+
+.footer-logo {
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.footer-logo span {
+    color: var(--pink);
+}
+
+
+/* ================= ANIMATION ================= */
+
+.hidden {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 130px;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .favorite-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* ================= HP ================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 115px 5% 70px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .profile-card {
+        width: 280px;
+    }
+
+    .profile-card img {
+        height: 350px;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .mini-info {
+        grid-template-columns: 1fr;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-card {
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .favorite-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px 25px;
+    }
+
+    .cv-content h2 {
+        font-size: 28px;
+    }
+
+    .cv-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .cv-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .ending h2 {
+        font-size: 43px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+}
